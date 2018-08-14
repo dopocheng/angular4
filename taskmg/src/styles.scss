@@ -1,5 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-html, body, app-root, .site {
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+html, body, app-root,mat-sidenav-container, .site {
     width: 100%;
     height: 100%;
     margin: 0
@@ -14,10 +14,6 @@ main {
     flex: 1;
 }
 
-header {
-    background-color: green
-}
-
-footer {
-    background-color: blue
+.fill-remaining-space {
+    flex: 1 1 auto;
 }
