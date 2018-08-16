@@ -1,11 +1,11 @@
 import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // 导入 httpModule 报错
+import { SharedModule } from '../shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule  } from '@angular/common/http';
 import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
-import { MatToolbarModule, MatIconModule, MatButtonModule } from '@angular/material';
-
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -13,10 +13,9 @@ import { loadSvgResources } from '../utils/svg.util';
 
 @NgModule({
   imports: [
+    SharedModule,
+    BrowserAnimationsModule,
     CommonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
     HttpClientModule,
   ],
   declarations: [
