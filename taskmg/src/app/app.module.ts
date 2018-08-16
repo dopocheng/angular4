@@ -4,18 +4,20 @@ import { MatSidenavModule } from '@angular/material';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { LoginComponent } from './login/login/login.component'
+import { SharedModule } from './shared/shared.module';
+import { LoginModule } from './login/login.module'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
     CoreModule,
     MatSidenavModule,
     AppRoutingModule,
+    SharedModule,
+    LoginModule
     
   ],
   providers: [],

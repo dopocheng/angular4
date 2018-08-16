@@ -1,6 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatFormFieldModule} from '@angular/material';
+import { 
+        MatToolbarModule, 
+        MatIconModule, 
+        MatButtonModule, 
+        MatCardModule, 
+        MatFormFieldModule, 
+        MatInputModule
+      } from '@angular/material';
 
 @NgModule({
   imports: [
@@ -9,7 +16,8 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatFor
     MatIconModule, 
     MatButtonModule, 
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   // 导入 相同模块 或 公用组件
   exports: [
@@ -18,7 +26,8 @@ import { MatToolbarModule, MatIconModule, MatButtonModule, MatCardModule, MatFor
     MatIconModule, 
     MatButtonModule, 
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: []
 })
