@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'taskmg';
+  darkTheme = false;
+  switchTheme(dark){
+    this.darkTheme = dark;
+  }
 }
