@@ -1,7 +1,7 @@
 <form>
   <mat-card>
     <mat-card-header>
-      <mat-card-title>登录:</mat-card-title>
+      <mat-card-title>注册:</mat-card-title>
     </mat-card-header>
     
     <mat-card-content>
@@ -11,28 +11,21 @@
       <mat-form-field class="full-width">
         <input matInput type="passsword" placeholder="您的密码">
       </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="passsword" placeholder="重复输入你的密码">
+      </mat-form-field>
+      <mat-grid-list cols="6">
+        <mat-grid-tile *ngFor="let item of items">
+          <mat-icon class="avatar" [svgIcon]="item"></mat-icon>
+        </mat-grid-tile>
+      </mat-grid-list>
       <button mat-raised-button color="primary" type="button">登录</button>
     </mat-card-content>
   
     <mat-card-actions class="text-right">
-      <p>还没有账户？ <a routerLink="/register" href="">注册</a></p>
+      <p>还没有账户？ <a href="">注册</a></p>
       <p>忘记密码？ <a href="">找回</a></p>
     </mat-card-actions>
-  </mat-card>
-
-  <mat-card>
-    <mat-card-header>
-      <mat-card-title>
-        每日佳句 
-      </mat-card-title>
-      <mat-card-subtitle>
-        静止便是死亡，只有运动才能敲开永生的大门。
-      </mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="/assets/timg.jpg" alt="">
-    <mat-card-content>
-      Stillness is death, can only open the eternal gate movement.
-    </mat-card-content>
   </mat-card>
     
 </form>

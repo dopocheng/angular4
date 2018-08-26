@@ -5,6 +5,9 @@ export const loadSvgResources = (ir: MatIconRegistry, ds: DomSanitizer) => {
     const imgDir = 'assets/img';
     const sidebarDir = `${imgDir}/sidebar`;
     const dayDir = `${imgDir}/days`;
+    const avatarDir = `${imgDir}/avatar`;
+    //加一个 svg 的图标集合
+    ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${avatarDir}/avatars.svg`));    
     ir.addSvgIcon('projects', ds.bypassSecurityTrustResourceUrl('assets/img/sidebar/projects.svg'));
     ir.addSvgIcon('project', ds.bypassSecurityTrustResourceUrl('assets/img/sidebar/project.svg'));
     ir.addSvgIcon('month', ds.bypassSecurityTrustResourceUrl(`${sidebarDir}/month.svg`));
