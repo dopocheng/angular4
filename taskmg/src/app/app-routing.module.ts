@@ -8,6 +8,12 @@ const routes: Routes = [
         redirectTo: '/login',
         pathMatch: 'full' 
     },
+
+    {// 新建项目 
+        path: 'project', 
+        redirectTo: '/project',
+        pathMatch: 'full' 
+    },
    
 ];
 
