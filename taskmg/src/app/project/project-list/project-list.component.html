@@ -1,6 +1,8 @@
 <app-project-item *ngFor="let project of projects" 
   [item]="project" 
-  class="card">
+  class="card"
+  (onInvite)="lauchInviteDialog()"
+  >
 
 </app-project-item>
 

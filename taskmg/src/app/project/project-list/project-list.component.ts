@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 import { NewProjectComponent } from '../new-project/new-project.component';
+import { InviteComponent } from '../invite/invite.component';
 
 @Component({
   selector: 'app-project-list',
@@ -30,6 +31,10 @@ export class ProjectListComponent implements OnInit {
   ngOnInit() {
   }
 
+  lauchInviteDialog() {
+    this.dialog.open(InviteComponent);
+  }
+
   openNewProjectDialog() {
     // dialog 大小 {width: '100px', height:'100px'} 位置 {position:{left: '0', top: '0'}} 
     // 需要得到令牌 （new-project） data {data: 'this is my data sent'}
@@ -37,5 +42,7 @@ export class ProjectListComponent implements OnInit {
     // 接受返回来的数据
     dialogRef.afterClosed().subscribe(result => console.error(result));
   }
+
+  
 
 }
