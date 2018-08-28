@@ -21,15 +21,59 @@ export class TaskHomeComponent implements OnInit {
               name: '张三',
               avatar: 'avatars:svg-11',
           },
-          dateTime: new Date(),
+          dueDate: `new Date()`,
         },
+        {
+          id: 2,
+          desc: '任务二: 完成老板布置的 ppt 作业',
+          owner: {
+              id: 1,
+              name: '李四',
+              avatar: 'avatars:svg-12',
+          },
+          dueDate: `new Date()`,
+        }
+      ]
+    },
+    {
+      id: 2,
+      name: '进行中',
+      tasks:[
+        {
+          id: 1,
+          desc: '任务三: 项目代码评审',
+          owner: {
+              id: 1,
+              name: '王五',
+              avatar: 'avatars:svg-13',
+          },
+          dueDate: `new Date()`,
+        },
+        {
+          id: 2,
+          desc: '任务四: 指定项目计划',
+          owner: {
+              id: 1,
+              name: '李四',
+              avatar: 'avatars:svg-12',
+          },
+          dueDate: `new Date()`,
+        }
       ]
     }
   ]
 
-  constructor() { dateTime: Date;}
+  constructor() {}
 
   ngOnInit() {
   }
 
 }
+
+class MyDate extends Date {
+ 
+  getTest() {
+      return this.getTime();
+  }
+}
+
