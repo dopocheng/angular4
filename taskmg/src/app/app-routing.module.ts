@@ -11,7 +11,7 @@ const routes: Routes = [
 
     {// 新建项目 
         path: 'project', 
-        redirectTo: '/project',
+        redirectTo: '/projects',
         pathMatch: 'full' 
     },
     { 

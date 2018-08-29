@@ -22,7 +22,6 @@ import { TaskModule } from './task/task.module'
     LoginModule,
     ProjectModule,
     TaskModule
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

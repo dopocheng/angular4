@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
+// import { MatTooltipModule } from '@angular/material/tooltip';
 import { 
         MatToolbarModule, 
         MatIconModule, 
@@ -12,6 +14,8 @@ import {
         MatGridListModule,
         MatDialogModule,
         MatAutocompleteModule,
+        MatCheckboxModule,
+        MatTooltipModule,
       } from '@angular/material';
 
 @NgModule({
@@ -28,6 +32,9 @@ import {
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule,
   ],
   // 导入 相同模块 或 公用组件
   exports: [
@@ -43,6 +50,9 @@ import {
     MatGridListModule,
     MatDialogModule,
     MatAutocompleteModule,
+    MatMenuModule,
+    MatCheckboxModule,
+    MatTooltipModule,
   ],
   declarations: []
 })
