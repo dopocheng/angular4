@@ -16,6 +16,10 @@ import {
         MatAutocompleteModule,
         MatCheckboxModule,
         MatTooltipModule,
+        MatDatepickerModule,
+        MatRadioModule,
+        MatNativeDateModule,
+        MatSelectModule,
       } from '@angular/material';
 
 @NgModule({
@@ -35,6 +39,10 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSelectModule,
   ],
   // 导入 相同模块 或 公用组件
   exports: [
@@ -53,6 +61,10 @@ import {
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatDatepickerModule,
+    MatRadioModule,
+    MatNativeDateModule,
+    MatSelectModule,
   ],
   declarations: []
 })
