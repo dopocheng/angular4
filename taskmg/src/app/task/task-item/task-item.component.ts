@@ -20,4 +20,9 @@ export class TaskItemComponent implements OnInit {
     this.taskClick.emit();
   }
 
+  onCheckBoxClick(ev: Event) {
+    // 阻止冒泡
+    ev.stopPropagation();
+  }
+
 }

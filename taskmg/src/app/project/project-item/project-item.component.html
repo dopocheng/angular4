@@ -9,8 +9,8 @@
     {{item.desc}}
   </mat-card-content>
   <mat-card-actions>
-    <button md-button type="button"><mat-icon>note</mat-icon><span>编辑</span></button>
+    <button md-button type="button" (click)="onEditerClick()"><mat-icon>note</mat-icon><span>编辑</span></button>
     <button md-button type="button" (click)="onInviteClick()"><mat-icon>group_add</mat-icon><span>邀请</span></button>
-    <button md-button type="button"><mat-icon>delete</mat-icon><span>删除</span></button>
+    <button md-button type="button" (click)="onDelClick()"><mat-icon>delete</mat-icon><span>删除</span></button>
   </mat-card-actions>
 </mat-card>

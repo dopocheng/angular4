@@ -6,7 +6,11 @@
   }"
   (click)="onItemlick()"
   >
-  <mat-checkbox class="completion-status" [checked]="item.completed"></mat-checkbox>
+  <mat-checkbox 
+  class="completion-status" 
+  [checked]="item.completed"
+  (click)="onCheckBoxClick($event)"
+  ></mat-checkbox>
   <div mat-line class="content" [ngClass]="{'completed':item.completed}">
     <!-- 鼠标放上去显示隐藏信息  mat-tooltip 改成 matTooltip-->
     <span [matTooltip]="item.desc" >{{item.desc}}</span>

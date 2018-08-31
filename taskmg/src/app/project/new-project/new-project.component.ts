@@ -8,6 +8,7 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
   styleUrls: ['./new-project.component.scss']
 })
 export class NewProjectComponent implements OnInit {
+  title = '';
   // 1.获得调用者传递过来的参数 data 数据 MAT_DIALOG_DATA
   // 2.将数据传给调用者 MatDialogRef
   constructor(
@@ -17,6 +18,7 @@ export class NewProjectComponent implements OnInit {
 
             }
   ngOnInit() {
+    this.title = this.data.title;
     // console.error(JSON.stringify(this.data));
     console.error(this.data);
     // 主题颜色全局设置 app.component (dialog mune)
@@ -27,5 +29,6 @@ export class NewProjectComponent implements OnInit {
     // 关闭时候返回数据
     this.dialogRef.close("I receive your message")
   }
+
 
 }
