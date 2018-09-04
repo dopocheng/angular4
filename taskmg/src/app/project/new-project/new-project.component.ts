@@ -20,7 +20,7 @@ export class NewProjectComponent implements OnInit {
   ngOnInit() {
     this.title = this.data.title;
     // console.error(JSON.stringify(this.data));
-    console.error(this.data);
+    // console.error(this.data);
     // 主题颜色全局设置 app.component (dialog mune)
     // this.oc.getContainerElement().classList.add(this.data.dark ? 'myapp-dark-theme' : null); 
   }

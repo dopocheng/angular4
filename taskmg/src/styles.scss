@@ -12,6 +12,10 @@ html, body, app-root,mat-sidenav-container, .site {
 
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .full-width {
     width: 100%;
@@ -19,4 +23,10 @@ main {
 
 .fill-remaining-space {
     flex: 1 1 auto;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: black;
 }
