@@ -42,7 +42,7 @@ describe('AppComponent', () => {
   it('应该包含一个 .site 的元素', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const AppcomDe : DebugElement = fixture.debugElement;
+    const AppcomDe: DebugElement = fixture.debugElement;
     const bannerEl: HTMLElement = AppcomDe.nativeElement;
     const p = bannerEl.querySelector('.site');
     expect(p).toBeTruthy();
