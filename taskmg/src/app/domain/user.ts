@@ -32,10 +32,10 @@ export interface User {
   identity?: Identity;
 }
 
-export interface Login {
+export interface Users {
   mobile: string;
   password: string;
   UserId ?: string;
   userNickName ?: string;
-  status ?: string;
+  Status ?: string;
 }

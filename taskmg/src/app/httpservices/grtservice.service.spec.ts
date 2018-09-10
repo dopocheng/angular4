@@ -2,7 +2,8 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { GrtserviceService } from './grtservice.service';
 import { HttpClientModule } from '@angular/common/http';
-import { Login } from '../domain';
+import { Users } from '../domain';
+import { async } from '@angular/core/testing';
 
 describe('GrtserviceService', () => {
   let service: GrtserviceService;
@@ -19,59 +20,46 @@ describe('GrtserviceService', () => {
       // ]
     }).compileComponents();
   });
+  it('登录', 
+    async(inject(
+      [GrtserviceService], (service: GrtserviceService) => {
+        console.log("service", service);
+        const mockLogin: Users = {
+          mobile: '13851468237',
+          password: '123123'
+        };
+        service.login(mockLogin).subscribe(res => {
+          res = res;
+          console.log(typeof(res));
+          // let js = JSON.parse(res);
+          // console.info("js", js);
+          console.info("resD", res.uri);
+          console.log("444", res.login.UserId);
+          expect(res.login.Status).toEqual('OK');
+        })
+      })
+    ));
 
-  // it('should be created', inject([GrtserviceService], (service: GrtserviceService) => {
-  //   expect(service).toBeTruthy();
-  // }));
-
-  // it('created', inject([GrtserviceService], (service: GrtserviceService) => {
-  //   console.log("service", service);
-  //   expect(service.login()).toBeTruthy();
-  // }));
-
-  it('created', inject([GrtserviceService], (service: GrtserviceService) => {
-    console.log("service", service);
-    const mockLogin: Login = {
-      mobile: '13851468237',
-      password: '123123'
-    };
-    service.login(mockLogin).subscribe(res => {
-      res = res;
-      console.log(typeof(res));
-      // let js = JSON.parse(res);
-      // console.info("js", js);
-      // console.info("resD", res.uri);
-      // console.log("444", res.login.UserId);
-      expect(res.uri).toEqual('O');
-    })
-    // console.log("666", service.User.UserId);
-    // expect(service.User.UserId).toBeTruthy();
-    // expect(service.login(mockLogin)).toBeTruthy();
-  }));
-
-
-
-  // it('慕课登录 observable',
-  //   (done: DoneFn) => {
-  //   service.login().subscribe(value => {
-  //     expect(value).toBe('observable value');
-  //     done();
-  //   });
-  // });
-
-  // it('#慕课登录 should return real value',() => {
-  //   console.log("service",service);
-  //   expect(service.login()).toBeTruthy;
-  // });
-
-  // it('登录请求 promise',
-  //   (done: DoneFn) => {
-  //   service.login().then(value => {
-  //     expect(value).toBe('promise value');
-  //     done();
-  //   });
-  // });
-
+    it('注册', 
+    async(inject(
+      [GrtserviceService], (service: GrtserviceService) => {
+        console.log("service", service);
+        const mockRegister: Users = {
+          mobile: '13851468237',
+          userNickName: 'dpc',
+          password: '123123'
+        };
+        service.register(mockRegister).subscribe(res => {
+          res = res;
+          console.log(typeof(res));
+          // let js = JSON.parse(res);
+          // console.info("js", js);
+          console.info("resD", res.uri);
+          console.log("444", res.register.UserId);
+          expect(res.register.Status).toEqual('OK');
+        })
+      })
+    ));
   // it('should be created', inject([GrtserviceService], (service: GrtserviceService) => {
   //   expect(service).toBeTruthy();
   // }));

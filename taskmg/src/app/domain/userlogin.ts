@@ -5,12 +5,12 @@
 //     userNickName ?: string;
 //     status ?: string;
 //   }
-import { Login } from './user';
+import { Users } from './user';
 import { Err } from './err';
 
 export interface UserLogin {
   //  和 service return 返回的字段要匹配
-  login?: Login;
+  login?: Users;
   userId?: string;
   err?: string;
   token?: string;
