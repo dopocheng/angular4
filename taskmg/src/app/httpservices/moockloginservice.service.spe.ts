@@ -69,12 +69,14 @@ describe('测试鉴权服务：AuthService', () => {
             body: JSON.stringify(mockResponse)
           })));
           console.log("mockend");
+          console.log("mockend",JSON.stringify(mockResponse));
         });
         service.register(mockUser).subscribe(auth => {
           console.log("auth", auth);
-          console.log("hello register!!", auth.userId, auth.userId);
+          console.log("hello register!!", auth.user, auth.userId, auth.user.id);
           expect(auth.token).toBeDefined();
-          expect(auth.userId).toEqual(mockUser.id);
+          console.log(auth.user.password);
+          expect(auth.user.id).toEqual(mockUser.id);
         });
       })));
 

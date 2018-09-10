@@ -4,7 +4,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { MessageService } from '../messages/messages.component'
 import { Project } from '../domain/project';
-import { ErrorConfig } from '../cofig/error.config'
 import { Observable, of } from 'rxjs';
 
 @Injectable()
@@ -17,7 +16,6 @@ export class ProjectService {
     constructor( 
         @Inject('BASE_CONFIG') private config,
         private http: HttpClient,
-        private errorConfig: ErrorConfig,
         private messageService: MessageService
     ) {
 
@@ -31,7 +29,8 @@ export class ProjectService {
     // 新增项目
     add(project: Project) {
         project.id = null;
-        const uri = `${this.config.uri}/${this.domain}`;
+        // const uri = `${this.config.uri}/${this.domain}`;
+        const uri = 'http://localhost:4200';
         return this.http
             .post<Project>(uri,JSON.stringify(project), {headers: this.httpOptions})
             .pipe(

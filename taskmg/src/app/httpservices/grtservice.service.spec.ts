@@ -1,8 +1,8 @@
 import { TestBed, inject } from '@angular/core/testing';
 
 import { GrtserviceService } from './grtservice.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { HttpHandler } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { Login } from '../domain';
 
 describe('GrtserviceService', () => {
   let service: GrtserviceService;
@@ -31,11 +31,25 @@ describe('GrtserviceService', () => {
 
   it('created', inject([GrtserviceService], (service: GrtserviceService) => {
     console.log("service", service);
-    service.login().subscribe(res => {
-      console.info(res);
+    const mockLogin: Login = {
+      mobile: '13851468237',
+      password: '123123'
+    };
+    service.login(mockLogin).subscribe(res => {
+      res = res;
+      console.log(typeof(res));
+      // let js = JSON.parse(res);
+      // console.info("js", js);
+      // console.info("resD", res.uri);
+      // console.log("444", res.login.UserId);
+      expect(res.uri).toEqual('O');
     })
-    expect(service.login()).toBeTruthy();
+    // console.log("666", service.User.UserId);
+    // expect(service.User.UserId).toBeTruthy();
+    // expect(service.login(mockLogin)).toBeTruthy();
   }));
+
+
 
   // it('慕课登录 observable',
   //   (done: DoneFn) => {

@@ -31,3 +31,11 @@ export interface User {
   dateOfBirth?: string;
   identity?: Identity;
 }
+
+export interface Login {
+  mobile: string;
+  password: string;
+  UserId ?: string;
+  userNickName ?: string;
+  status ?: string;
+}
