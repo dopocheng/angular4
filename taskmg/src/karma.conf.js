@@ -20,12 +20,17 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
+    proxies: {
+      '/backend-api': 'http://192.168.2.48:8080'
+    },
+    urlRoot: '/',
     reporters: ['progress', 'kjhtml'],
-    port: 9876,
+    port:9876 ,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false
+    singleRun: false,
+    
   });
 };

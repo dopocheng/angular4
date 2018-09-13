@@ -68,7 +68,7 @@ describe('测试鉴权服务：AuthService', () => {
           conn.mockRespond(new Response(new ResponseOptions({
             body: JSON.stringify(mockResponse)
           })));
-          console.log("mockend");
+          console.log('mockend');
           console.log("mockend",JSON.stringify(mockResponse));
         });
         service.register(mockUser).subscribe(auth => {
