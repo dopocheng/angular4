@@ -2,6 +2,7 @@ import { NgModule, SkipSelf, Optional } from '@angular/core';
 import { CommonModule } from '@angular/common';
 // 导入 httpModule 报错
 import { SharedModule } from '../shared/shared.module';
+import { AppRoutingModule } from '../app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule  } from '@angular/common/http';
 import { MatIconRegistry } from '@angular/material';
@@ -19,6 +20,8 @@ import 'hammerjs';
     BrowserAnimationsModule,
     CommonModule,
     HttpClientModule,
+    AppRoutingModule
+    
   ],
   declarations: [
     HeaderComponent,
@@ -28,7 +31,8 @@ import 'hammerjs';
   exports: [
     HeaderComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    AppRoutingModule,
   ]
 })
 export class CoreModule {

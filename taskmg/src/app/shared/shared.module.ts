@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 import { 
         MatToolbarModule, 
@@ -44,6 +45,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule
   ],
   // 导入 相同模块 或 公用组件
   exports: [
@@ -66,6 +68,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatSidenavModule
   ],
   entryComponents: [ConfirmDialogComponent],
   declarations: [ConfirmDialogComponent]
