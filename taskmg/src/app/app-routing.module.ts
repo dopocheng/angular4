@@ -10,12 +10,12 @@ const routes: Routes = [
     },
 
     {// 新建项目 
-        path: 'project', 
+        path: 'projects', 
         redirectTo: '/projects',
         pathMatch: 'full' 
     },
     { 
-        path: 'tasklist', 
+        path: 'tasklists', 
         redirectTo: '/tasklists',
         pathMatch: 'full' 
     },

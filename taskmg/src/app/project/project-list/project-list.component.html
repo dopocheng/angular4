@@ -1,5 +1,4 @@
 <app-project-item *ngFor="let project of projects"
-  [@card] = "cardState"
   [item]="project" 
   class="card"
   (onInvite)="launchInviteDialog()"

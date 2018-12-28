@@ -103,7 +103,7 @@ export class TaskHomeComponent implements OnInit {
 
   launchConfirmDialog() {
     const dialogRef = this.dialog.open(ConfirmDialogComponent,{data: {title: '删除列表', content: '你确认删除该列表么？'}});
-    // dialogRef.afterClosed().subscribe(res => {console.error(res)})
+    dialogRef.afterClosed().subscribe(res => {console.error(res)})
   }
 
   launchEditListDialog() {

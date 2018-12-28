@@ -29,7 +29,7 @@ export class UserService {
    * @returns {Observable<UserLogin>}
    * @memberof GrtserviceService
    */
-  login(login: User): Observable<Login> {
+  Login(login: User): Observable<Login> {
     console.log('login');
     const params = new HttpParams()
       .set('access_token', this.token)
@@ -58,7 +58,7 @@ export class UserService {
     );
   }
 
-  Login(s) {
+  login(s) {
     this.http.post(this.configUrl, {
       'content-Type': 'application/x-www-form-urlencoded',
     },
