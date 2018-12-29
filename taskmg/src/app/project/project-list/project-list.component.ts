@@ -13,7 +13,7 @@ import { projection } from '@angular/core/src/render3/instructions';
   selector: 'app-project-list',
   templateUrl: './project-list.component.html',
   styleUrls: ['./project-list.component.scss'],
-  // animations: [slideToRight, listAnimation]
+  animations: [slideToRight, listAnimation]
 })
 export class ProjectListComponent implements OnInit {
   @HostBinding('@routeAnim') state;
@@ -55,7 +55,9 @@ export class ProjectListComponent implements OnInit {
     // 接受返回来的数据
     dialogRef.afterClosed().subscribe(result => {
       console.error(result);
-      this.projects = [...this.projects,{id: 3, name:'一个新项目', desc: '这是一个新项目', coverImg: 'assets/img/covers/8.jpg'}]
+      this.projects = [...this.projects,{id: 3, name:'一个新项目', desc: '这是一个新项目', coverImg: 'assets/img/covers/8.jpg'},
+                                        {id: 4, name:'一个新项目', desc: '这you是一个新项目', coverImg: 'assets/img/covers/9.jpg'}  
+                      ]                 
     });
   }
 
