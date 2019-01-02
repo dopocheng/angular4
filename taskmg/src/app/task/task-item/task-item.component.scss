@@ -58,6 +58,11 @@ mat-icon.avatar {
     order: 3
 }
 
+.drag-start {
+    opacity: 0.5;
+    border: #ff525f dashed 2px;
+}
+
 :hover {
     width: 100%
 }

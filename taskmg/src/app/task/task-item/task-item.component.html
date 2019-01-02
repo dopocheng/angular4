@@ -5,6 +5,8 @@
     'priority-important': item.priority === 2,
     'priority-emergency': item.priority === 1
   }"
+  [app-draggable]="true"
+  [draggedClass]="'drag-start'"
   (click)="onItemlick()"
   >
   <mat-checkbox 
