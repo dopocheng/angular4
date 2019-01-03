@@ -59,10 +59,14 @@ mat-icon.avatar {
 }
 
 .drag-start {
-    opacity: 0.5;
-    border: #ff525f dashed 2px;
+    opacity: 1;
+    border: #ff525f dashed 2px;             // 红色虚线
 }
 
-:hover {
+.task-item {
+    
+}
+
+:host {
     width: 100%
 }
