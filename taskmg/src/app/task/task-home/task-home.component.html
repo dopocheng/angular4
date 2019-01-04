@@ -8,7 +8,7 @@
     [dragTag]="'task-list'"
     [draggedClass]="'drag-start'"
     [dragData]="list"
-    (dropped)="handlemove($event, list)"
+    (dropped)="handleMove($event, list)"
     *ngFor="let list of lists">
     <app-task-header 
       [header]="list.name"

@@ -9,8 +9,7 @@
   [dragTag]="'task-item'"
   [draggedClass]="'drag-start'"
   [dragData]="item"
-  (click)="onItemlick()"
-  >
+  (click)="onItemlick()">
   <mat-checkbox 
   class="completion-status" 
   [checked]="item.completed"
@@ -24,6 +23,10 @@
     <span class="due-date" *ngIf="item.dueDate">
       {{item.dueDate | date: "yy-MM-dd"}}
     </span>
+    <!-- <ng-template [ngIf]="item.reminder">
+      <mat-icon>alarm</mat-icon>
+    </ng-template> -->
+    <!-- 相当于上面 -->
     <mat-icon *ngIf="item.reminder">alarm</mat-icon>
   </div>
   <mat-icon class="avatar" [svgIcon]="avatar" mat-list-avatar></mat-icon>
