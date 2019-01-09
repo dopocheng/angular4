@@ -8,6 +8,7 @@ import { TaskHeaderComponent } from './task-header/task-header.component';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { CopyTaskComponent } from './copy-task/copy-task.component';
 import { NewTaskListComponent } from './new-task-list/new-task-list.component';
+import { QuickTaskComponent } from './quick-task/quick-task.component';
 
 @NgModule({
   imports: [
@@ -21,7 +22,7 @@ import { NewTaskListComponent } from './new-task-list/new-task-list.component';
     TaskHeaderComponent, 
     NewTaskComponent, 
     CopyTaskComponent, 
-    NewTaskListComponent,  
+    NewTaskListComponent, QuickTaskComponent,  
   ],
   entryComponents: [
     NewTaskComponent,

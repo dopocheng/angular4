@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { MatTooltipModule } from '@angular/material/tooltip';
 import { 
         MatToolbarModule, 
@@ -34,6 +35,8 @@ import { DirectiveModule } from '../directive/directive.module';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule, // 模板驱动式表单
+    ReactiveFormsModule,//响应式表单
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
@@ -58,6 +61,8 @@ import { DirectiveModule } from '../directive/directive.module';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    FormsModule, 
+    ReactiveFormsModule,
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
