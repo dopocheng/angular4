@@ -1,0 +1,31 @@
+.mat-icon.avatar {
+    overflow: hidden;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 12px;
+}
+
+.scroll-container {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    display: block;
+}
+
+.image-container .after {
+    position: absolut;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    display: none;
+    color: #FFF;
+}

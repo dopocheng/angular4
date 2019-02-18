@@ -1,5 +1,4 @@
-import { Component, OnInit, HostListener, Output } from '@angular/core';
-import { EventEmitter } from 'protractor';
+import { Component, OnInit, HostListener, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-quick-task',
@@ -23,6 +22,7 @@ export class QuickTaskComponent implements OnInit {
 
   @HostListener('keyup.enter')
   sendQuickTask(){
+    // desc 为空，或长度为空，或多个空格  
     if(!this.desc || this.desc.length === 0 || !this.desc.trim()) {
       return;
     }

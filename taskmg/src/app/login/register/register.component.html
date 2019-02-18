@@ -1,4 +1,4 @@
-<form>
+<form [formGroup]='form' (ngSubmit)="onSubmit(form, $event)">
   <mat-card>
     <mat-card-header>
       <mat-card-title>注册:</mat-card-title>
@@ -6,20 +6,31 @@
     
     <mat-card-content>
       <mat-form-field class="full-width">
-        <input matInput type="text" placeholder="您的 Email">
+        <input matInput type="text" placeholder="您的 Email" formControlName="email">
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input matInput type="passsword" placeholder="您的密码">
+          <input matInput type="text" placeholder="您的姓名" formControlName="name">
+        </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput type="passsword" placeholder="您的密码" formControlName="password">
       </mat-form-field>
       <mat-form-field class="full-width">
-        <input matInput type="passsword" placeholder="重复输入你的密码">
+        <input matInput type="passsword" placeholder="重复输入你的密码" formControlName="repeat">
       </mat-form-field>
-      <mat-grid-list cols="6">
+      <app-image-list-select
+      [useSvgIcon]="true"
+      [cols]="6"
+      [title]="'选择头像:'"
+      [items]="items"
+      formControlName="avatar">
+
+      </app-image-list-select>
+      <!-- <mat-grid-list cols="6">
         <mat-grid-tile *ngFor="let item of items">
           <mat-icon class="avatar" [svgIcon]="item"></mat-icon>
         </mat-grid-tile>
-      </mat-grid-list>
-      <button mat-raised-button color="primary" type="button">登录</button>
+      </mat-grid-list> -->
+      <button mat-raised-button color="primary" type="submit">登录</button>
     </mat-card-content>
   
     <mat-card-actions class="text-right">
